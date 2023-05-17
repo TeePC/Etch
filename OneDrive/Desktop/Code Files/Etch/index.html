@@ -15,23 +15,34 @@
         <div class="option__container">
             <h1 class="options__title">Options</h1>
             <div class="dimensions">
+                <div class="color__container">
+                    <h2 class="color__h2">Choose a Color</h2>
+                    <input type="color" id="color" class="picker">
+                </div>
+                
+                
+
                 <p class="slider__top">Adjust Dimensions</p>
-                <input type="range" id="range" name="quantity" min="1" max="64" value="16" class="slider">
-                <p class="slider__top">a </p>
+                <input type="range" id="myRange" name="quantity" min="1" max="64" value="16" class="slider">
+                <div class="slider__bottom">
+                <p class="slider__top" id="myValue"> </p>
+                <p class="slider__top">X </p>
+                <p class="slider__top" id="myValue2"> </p>
+                </div>
                 
                
             </div>
             
             
             
-            <button class="btn">BUTTON</button>
+            <button class="btn" onclick="clear_grid()">BUTTON</button>
             <button class="btn">BUTTON</button>
             <button class="btn">BUTTON</button>
         </div>
         
 
     
-    <div class="grid__container">
+    <div class="grid__container" id="grid">
         
          
       </div>
