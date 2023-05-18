@@ -84,10 +84,10 @@ align-items: center;
     
 }
 
-.picker::-webkit-color-swatch-wrapper {
+ /*.picker::-webkit-color-swatch-wrapper {
 	
 }
-
+*/
 
 
 
@@ -147,8 +147,11 @@ align-items: center;
     flex: 0.6;
     display: grid;
     grid-template-columns: repeat(16, 1fr);
-    background-color: bisque;
-    padding: 5px;
+    background-color: transparent;
+    border: none;
+    box-shadow: 0 4px 10px rgb(0 0 0 / 0.8);
+
+    padding: 0px;
     width: 500px;
     height: 500px;
     max-width: 500px;
