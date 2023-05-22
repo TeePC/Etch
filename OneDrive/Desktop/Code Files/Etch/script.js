@@ -62,6 +62,35 @@ function clear_grid() {
 
 }
 
+function reset() {
+const check = document.getElementsByClassName("grid__item");
+
+  for ( let i = 0; i< check.length; i++) {
+    check[i].style.backgroundColor = "white";
+  }
+
+}
+
+let is__toggled = false;
+
+function toggle__gridLines() {
+  const square = document.getElementsByClassName("grid__item");
+  
+  console.log(is__toggled);
+   if (!is__toggled) {
+    for ( let i = 0; i< square.length; i++) {
+    square[i].style.border = "none";
+  }
+  is__toggled = true;
+  console.log(is__toggled);
+} else {
+  for ( let i = 0; i< square.length; i++) {
+    square[i].style.border = "1px solid rgba(0, 0, 0, 0.8)";
+  }
+  is__toggled = false;
+
+}
+}
 
 
 function create_grid(num) {
@@ -92,3 +121,7 @@ function equip(box) {
 }
 
 
+function eraser() {
+  change__color = event => event.target.style.backgroundColor = "white";
+
+}
