@@ -8,7 +8,14 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1 class="title">Etch-a-Sketch</h1>
+    <div class="context">
+ 
+    </div>
+
+
+<div class="area" >
+            <ul class="circles">
+                <h1 class="title">Etch-a-Sketch</h1>
 
     <div class="main">
         
@@ -37,7 +44,8 @@
             
             <button class="btn" onclick="reset()">Reset</button>
             <button class="btn" onclick="toggle__gridLines()"> Grid Lines</button>
-            <button class="btn" onclick="eraser()">eraser</button>
+            <button class="btn" onclick="eraser()"><p id="eraserStatus">Eraser:off</p></button>
+            <button class="btn" onclick="rainbow()"><p id="rainbowStatus">Rainbow:off</p></button>
         </div>
         
 
@@ -48,6 +56,19 @@
       </div>
 
     </div>
+               
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+            </ul>
+    </div >
 
 </body>
 <script src = "script.js"></script>

@@ -12,7 +12,7 @@ let current__value = slider.value;
 
 let MDOWN = false;
 
-const current__color = document.getElementById("color");
+let current__color = document.getElementById("color");
 
 
 let change__color = event => event.target.style.backgroundColor = current__color.value;
@@ -112,16 +112,82 @@ function create_grid(num) {
 
 
 
- change__color = event => event.target.style.backgroundColor = current__color.value;
+// change__color = event => event.target.style.backgroundColor = current__color.value;
 function equip(box) {
-  box.addEventListener("mousedown", change__color);
-  box.addEventListener("mouseover", event => {
-    if (event.buttons == 1) change__color(event);
+  box.addEventListener("mousedown",box => { change__color(box)});
+  box.addEventListener("mouseover", box => {
+    if (box.buttons == 1) change__color(box);
   });
+
+  //box.addEventListener("touchstart", change__color);
+  //box.addEventListener("touchmove", event => {
+   // if (event.buttons == 1) change__color(event);
+ // });
 }
 
+
+function equip_erase(box) {
+  box.addEventListener("mousedown", box => { this.target.style.backgroundColor = "white" });
+  box.addEventListener("mouseover", box => {
+    if (box.buttons == 1) change__color(box);
+  });
+
+}
+
+let toggle__eraser = false; 
 
 function eraser() {
-  change__color = event => event.target.style.backgroundColor = "white";
 
+  const status = document.getElementById("eraserStatus");
+  const squares = document.getElementsByClassName("grid__item");
+
+  if (!toggle__eraser) {
+    status.textContent = "Eraser:On"
+    change__color = event => event.target.style.backgroundColor = "white";
+    
+    const arr = Array.from(squares) ; 
+     
+     toggle__eraser = true;
+  } else {
+    status.textContent = "Eraser:Off"
+    change__color = squares => squares.target.style.backgroundColor = current__color.value;
+
+    //for ( let i = 0; i < squares.length; i++) {
+      //equip(squares);
+     //} 
+    toggle__eraser = false;
+  }
+  }
+
+  const randColor = () =>  {
+    return "#" + Math.floor(Math.random()*16777215).toString(16).padStart(6, '0').toUpperCase();
+    console.log(randColor)
 }
+
+let toggle__rainbow = false;
+
+  function rainbow() {
+
+    const status = document.getElementById("rainbowStatus");
+    const squares = document.getElementsByClassName("grid__item");
+
+          if (!toggle__rainbow) {
+            status.textContent = "Rainbow:On"
+            change__color = squares => squares.target.style.backgroundColor = randColor();
+
+            toggle__rainbow = true;
+          }
+
+          else {
+
+            status.textContent = "Rainbow:Off"
+            change__color = squares => squares.target.style.backgroundColor = current__color.value;
+
+            toggle__rainbow = false;
+          }
+    
+
+
+  }
+ 
+
