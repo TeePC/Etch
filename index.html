@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etch</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="context">
+ 
+    </div>
+
+
+<div class="area" >
+            <ul class="circles">
+                <h1 class="title">Etch-a-Sketch</h1>
+
+    <div class="main">
+        
+        <div class="option__container">
+            <h1 class="options__title">Options</h1>
+            <div class="dimensions">
+                <div class="color__container">
+                    <h2 class="color__h2" id="color__tag1">Choose a Color</h2>
+                    <input type="color" id="color" class="picker">
+                </div>
+                
+                
+
+                <p class="slider__top">Adjust Dimensions</p>
+                <input type="range" id="myRange" name="quantity" min="1" max="64" value="16" class="slider">
+                <div class="slider__bottom">
+                <p class="slider__top" id="myValue"> </p>
+                <p class="slider__top">X </p>
+                <p class="slider__top" id="myValue2"> </p>
+                </div>
+                
+               
+            </div>
+            
+            
+            
+            <button class="btn" onclick="reset()">Reset</button>
+            <button class="btn" onclick="toggle__gridLines()"> Grid Lines</button>
+            <button class="btn" onclick="eraser()"><p id="eraserStatus">Eraser:off</p></button>
+            <button class="btn" onclick="rainbow()"><p id="rainbowStatus">Rainbow:off</p></button>
+        </div>
+        
+
+    
+    <div class="grid__container" id="grid">
+        
+         
+      </div>
+
+    </div>
+               
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+            </ul>
+    </div >
+
+</body>
+<script src = "script.js"></script>
+</html>
