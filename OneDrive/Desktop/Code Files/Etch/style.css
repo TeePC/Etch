@@ -16,7 +16,7 @@ body{
     text-align: center;
     margin-bottom: 50px;
     margin-top: 30px;
-    
+    color: white;
 }
 
 
@@ -38,6 +38,7 @@ body{
 .options__title {
     text-align: center;
     margin-bottom: 50px;
+    color: white;
 
 }
 
@@ -52,6 +53,7 @@ body{
     font-size: 14px;
     text-align: center;
     margin-bottom: 4px;
+    color: white;
 }
 
 .slider__bottom {
@@ -67,7 +69,7 @@ align-items: center;
 }
 
 .color__h2 {
-    color: aquamarine;
+    color: white;
     text-align: center;
 }
 
@@ -164,6 +166,7 @@ align-items: center;
     height: 500px;
     max-width: 500px;
     max-height: 500px;
+    min-width: 500px;
     margin-bottom: 30px;
   }
 
@@ -319,4 +322,33 @@ align-items: center;
         border-radius: 50%;
     }
 
+}
+
+
+
+    @media screen and (max-width: 800px) {
+  .main {
+    flex-direction: column-reverse;
+    align-items: center;
+
+    
+  }
+
+  .grid__container {
+    flex:none;
+  }
+
+  .option__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: auto;
+    width: 100%;
+    margin-right: 0px;
+    margin-left: 0px;
+  }
+
+  .btn {
+    height: 50%;
+  }
 }

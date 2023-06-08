@@ -22,6 +22,11 @@ const grid = document.getElementById("grid");
 
 
 
+//document.getElementById("color__tag1").style.color = current__color;
+
+
+
+
 slider.oninput = function() {
   output.innerHTML = this.value;
   output2.innerHTML = this.value;
