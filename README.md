@@ -2,4 +2,10 @@
 
 
 
-Just for some flare I added a moving background, Background logic https://codepen.io/mohaiman
+Just for some flare I added a moving background.
+
+Working Size Slider, Rainbow Feauture, Toggle Grid Lines and color picker
+
+
+
+Background logic by: https://codepen.io/mohaiman
